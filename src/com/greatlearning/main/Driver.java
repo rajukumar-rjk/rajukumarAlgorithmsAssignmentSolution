@@ -7,17 +7,19 @@ import com.greatlearning.service.*;
 public class Driver {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-
+		
+		// taking value for no of companies
 		System.out.println("enter the no of companies");
 		int noOfCompanies = scan.nextInt();
 		Company[] companies = new Company[noOfCompanies];
 
+		// for each company taking value for stock price and if changes in price happens yesterday
 		for (int i = 0; i < noOfCompanies; i++) {
 			Company company = new Company();
 			System.out.println("Enter current stock price of the company " + (i + 1));
 			company.setSharePrice(scan.nextDouble());
-			System.out.println("Whether company's stock price rose today compare to yesterday? (y / n)");
-			if (scan.next().toLowerCase().charAt(0) == 'y') {
+			System.out.println("Whether company's stock price rose today compare to yesterday? (true / false)");
+			if (scan.next().toLowerCase().charAt(0) == 't') {
 				company.setStockPriceUp(true);
 			} else {
 				company.setStockPriceUp(false);
@@ -25,6 +27,7 @@ public class Driver {
 			companies[i] = company;
 		}
 
+		// below codes are self-explanatory 
 		MergeSort mergeSort = new MergeSort();
 		BinarySearch binarySearch = new BinarySearch();
 

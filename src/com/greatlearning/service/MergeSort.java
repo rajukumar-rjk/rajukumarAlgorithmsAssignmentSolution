@@ -3,6 +3,7 @@ package com.greatlearning.service;
 import com.greatlearning.model.*;
 
 public class MergeSort {
+	
 	public void sort(Company[] companies) {
 		divideArray(companies, 0, companies.length - 1);
 	}
@@ -19,6 +20,7 @@ public class MergeSort {
 	public void conquerArray(Company[] companies, int first, int mid, int last) {
 		int leftArrayLength = mid - first + 1;
 		int rightArrayLength = last - mid;
+
 		Company[] leftArray = new Company[leftArrayLength];
 		Company[] rightArray = new Company[rightArrayLength];
 
@@ -38,10 +40,12 @@ public class MergeSort {
 			if (leftArray[i].getSharePrice() <= rightArray[j].getSharePrice()) {
 				companies[k] = leftArray[i];
 				i++;
+
 			} else {
 				companies[k] = rightArray[j];
 				j++;
 			}
+
 			k++;
 		}
 
@@ -58,3 +62,4 @@ public class MergeSort {
 		}
 	}
 }
+

@@ -17,11 +17,14 @@ public class BinarySearch {
 
 			} else if (companies[mid].getSharePrice() < searchValue) {
 				first = mid + 1;
+
 			} else {
 				last = mid - 1;
 			}
+
 		}
 		
 		return false;
 	}
+
 }
