@@ -1,0 +1,16 @@
+a) T (n) = 3T (n/2) + n
+
+Answer: Θ(n^log 3{base 2})
+
+b) T (n) = 64T (n/8) − n^2(log n)
+Answer: Θ(n^2 (log n)^2)
+
+c) T (n) = 2nT (n/2) + n^n
+Answer: NA
+
+d) T (n) = 3T (n/3) + n/2
+Answer: Θ(n log n)
+
+e) T (n) = 7T (n/3) + n^2
+Answer: Θ(n^2)
+
